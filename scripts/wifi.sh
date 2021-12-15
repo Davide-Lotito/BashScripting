@@ -1,8 +1,6 @@
-## An easy script to turnOn/Off the wifi connection with ifconfig
+## An easy script to turnOn/Off the wifi card
 # !/bin/bash
 
-# specify the name of your network card (eth0, eth1, wlan0, etc ...)
-IFACE="wlo1"
 
 # contains the status of connection = STATUS
 
@@ -11,6 +9,7 @@ echo "Created by Davide"
 # to check if there is internet connection
 wget -q --spider http://google.com
 
+# error codes from wget
 if [ $? -eq 0 ]; then
     #echo "Online"
     STATUS=1;
@@ -19,12 +18,12 @@ else
     STATUS=0;
 fi
 
-if [ "$STATUS" = 0 ] ; then
-    sudo ifconfig "$IFACE" up
-    echo "wifi on"
+if [ "$STATUS" = 1 ] ; then
+    nmcli radio wifi off
+    echo "the wifi was on, now I turn it off"
     STATUS=$((STATUS+1));
-elif [ "$STATUS" = 1 ] ; then
-    sudo ifconfig "$IFACE" down
+elif [ "$STATUS" = 0 ] ; then
+    nmcli radio wifi on
     STATUS=$((STATUS-1));
-    echo "wifi off"
+    echo "wifi was off, now I turn it on"
 fi
