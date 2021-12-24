@@ -1,4 +1,4 @@
-## An easy script to turnOn/Off the wifi card
+## An easy script to turn On/Off the wifi card
 # !/bin/bash
 
 # contains the status of connection = STATUS
