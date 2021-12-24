@@ -1,8 +1,9 @@
 ## An easy script to check if two strings are equal or not
+## Very useful to check the hash when you download big files
 #!/bin/bash
 
 if [ "$1" == "-help" ]; then
-    echo "This script turnOn/Off the wifi card"
+    echo "This script check if two strings are equal or not"
     echo "It's created by Davide"
     exit 0;
 fi
