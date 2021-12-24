@@ -4,7 +4,7 @@
 # contains the status of connection = STATUS
 
 if [ "$1" == "-help" ]; then
-    echo "This script turnOn/Off the wifi card"
+    echo "This script turn On/Off the wifi card"
     echo "It's created by Davide"
     exit 0;
 fi
