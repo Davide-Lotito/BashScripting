@@ -4,6 +4,7 @@
 
 if [ "$1" == "-help" ]; then
     echo "This script check if two strings are equal"
+    echo "Uses two parameters, the two string to compare"
     echo "It's created by Davide"
     exit 0;
 fi
