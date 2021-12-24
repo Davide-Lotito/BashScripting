@@ -1,10 +1,13 @@
 ## An easy script to turnOn/Off the wifi card
 # !/bin/bash
 
-
 # contains the status of connection = STATUS
 
-echo "Created by Davide"
+if [ "$1" == "-help" ]; then
+    echo "This script turnOn/Off the wifi card"
+    echo "It's created by Davide"
+    exit 0;
+fi
 
 # to check if there is internet connection
 wget -q --spider http://google.com
