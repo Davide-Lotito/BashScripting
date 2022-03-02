@@ -1,3 +1,4 @@
+# Easy script that brings together all the commands for extracting archives
 # !/bin/bash
 
 #$1 it's the first parameter, it contains the type of archive (zip/tar)
