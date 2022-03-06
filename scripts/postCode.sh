@@ -26,6 +26,4 @@ git add *
 
 git commit -m "${message}"
 
-myUser=Davide-Lotito
-
-git push && echo $myUser
+git push
