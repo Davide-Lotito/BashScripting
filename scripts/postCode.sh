@@ -12,8 +12,18 @@ if [ "$1" == "-help" ]; then
     exit 0;
 fi
 
+git pull > temp.txt
+temp=`cat temp.txt`
+rm temp.txt
+
+if [ "$temp" != "Già aggiornato." ]; then
+    echo "Branch not updated with respect to the master, to avoid problems, the script ends"
+    echo "Message from GitHub: "$temp
+    exit 1;
+fi
+
 git add $1
 
 git commit -m "$2"
 
-git push 
+#git push 
