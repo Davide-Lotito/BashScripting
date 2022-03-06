@@ -1,8 +1,6 @@
 ## An easy script to post yout new code on GitHub
 # !/bin/bash
 
-#$1 it's the first parameter, it contains the file/* to add on the remote
-
 
 if [ "$1" == "-help" ]; then
     echo "This script automates the process of publishing your code on GitHub"
@@ -24,8 +22,8 @@ if [ "$temp" != "Già aggiornato." ]; then
     exit 1;
 fi
 
-git add $1
+git add *
 
-git commit -m"${message}"
+git commit -m "${message}"
 
 #git push 
