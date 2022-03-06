@@ -28,4 +28,5 @@ git commit -m "${message}"
 
 myUser=Davide-Lotito
 
-git push < $myUser
+git push
+echo $myUser
