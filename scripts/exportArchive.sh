@@ -12,6 +12,14 @@
     #7z
     #gz
 
+if [ "$1" == "-help" ] || [ "$1" == "--help" ]; then
+    echo "This script script that brings together all the commands for extracting archives"
+    echo "Uses two parameters, the type of archive (zip/tar/..) and the file/path to extract"
+    echo "Supported archives are: zip, tar, tar.gz, tar.bz2, 7z, gz"
+    echo "It's created by Davide"
+    exit 0;
+fi
+
 if [ $1 == "zip" ] ; then
     echo "extract a zip file"
     unzip $2
@@ -25,4 +33,7 @@ elif [ $1 == "7z"  ] ; then
     p7zip -d $2
 elif [ $1 == "gz"  ] ; then
     gzip -d $2
+else
+    echo "archive not supported"
+    exit 0;
 fi

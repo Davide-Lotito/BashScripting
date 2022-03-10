@@ -2,7 +2,7 @@
 # !/bin/bash
 
 
-if [ "$1" == "-help" ]; then
+if [ "$1" == "-help" ] || [ "$1" == "--help" ]; then
     echo "This script automates the process of publishing your code on GitHub"
     echo "Uses two parameters, the file/* to add and the message (put the message between quotes)"
     echo "It's created by Davide"

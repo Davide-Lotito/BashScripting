@@ -3,6 +3,13 @@
 
 #$1 it's the website url
 
+if [ "$1" == "-help" ] || [ "$1" == "--help" ]; then
+    echo "This script get the public IP addres of a website"
+    echo "Uses only one parameter, the url of the website"
+    echo "It's created by Davide"
+    exit 0;
+fi
+
 nslookup $1 | grep Address: > temp.txt
 
 filename='temp.txt'
