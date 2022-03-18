@@ -10,6 +10,11 @@ if [ "$1" == "-help" ] || [ "$1" == "--help" ]; then
     exit 0;
 fi
 
+if [ "$#" != 1 ]; then
+    echo "You have to provide the website url"
+    exit 1;
+fi
+
 nslookup $1 | grep Address: > temp.txt
 
 filename='temp.txt'

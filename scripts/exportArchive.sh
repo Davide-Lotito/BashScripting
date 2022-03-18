@@ -20,6 +20,11 @@ if [ "$1" == "-help" ] || [ "$1" == "--help" ]; then
     exit 0;
 fi
 
+if [ "$#" != 2 ]; then
+    echo "You have to provide two parameters, the type and path to the file"
+    exit 1;
+fi
+
 if [ $1 == "zip" ] ; then
     echo "extract a zip file"
     unzip $2
@@ -35,5 +40,5 @@ elif [ $1 == "gz"  ] ; then
     gzip -d $2
 else
     echo "archive not supported"
-    exit 0;
+    exit 1;
 fi
