@@ -21,7 +21,7 @@ filename='temp.txt'
 n=1
 while read line; do
 if [ "$n" == 2 ] ; then
-    echo "The IP address of [ $1 ] is: ${line:10}"
+    echo "The IP address of [ $1 ] is: ${line:9}"
 fi
 n=$((n+1))
 done < $filename
