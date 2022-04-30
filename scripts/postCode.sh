@@ -16,7 +16,7 @@ git pull > temp.txt
 temp=`cat temp.txt`
 rm temp.txt
 
-if [ "$temp" != "Già aggiornato." ]; then
+if [ "$temp" != "already updated" ]; then
     echo "Branch not updated with respect to the master, to avoid problems, the script ends"
     echo "Message from GitHub: "$temp
     exit 1;
